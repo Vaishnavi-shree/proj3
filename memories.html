@@ -1,0 +1,210 @@
+<!-- memories.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+
+    body {
+      background-color: lavenderblush;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+  
+    
+    background-image: url('Tullips (1).jpg'); /* apni image ka path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body>
+<nav style="background-color: #dda0dd; padding: 1rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+  <div style="font-size: 1.5rem; font-weight: bold; color: white;">💜 Fun And Laugh</div>
+  <div>
+    <a href="index.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Home</a>
+    <a href="memories.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Old Memories</a>
+    <a href="games.html" style="text-decoration: none; color: white; font-weight: 500;">Games</a>
+    <a href="message.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Messages</a>
+  </div>
+</nav>
+<audio autoplay loop>
+      <source src="WhatsApp Audio 2025-08-03 at 04.20.13_7fff55cf.mp3" type="audio/mp3">
+    </audio>
+  <section class="memories">
+    <h1>Awkward Moments Gallery 📷</h1>
+  <p>A collection of weird smiles, blurry photos, and random videos from the Hello-Hi phase. No deep memories—just light-hearted captures of “oh that happened?”😄 </p>
+    <div class="grid">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color:royalblue;
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color:blueviolet;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 15px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .caption {
+      margin-top: 20px;
+      color: #f1f1f1;
+      font-size: 20px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Fun Memories 🤍. Just Click the pictures to see the magic</h1>
+
+  <div class="gallery">
+    <img src="WhatsApp Image 2025-08-03 at 13.32.56_35baa293.jpg" 
+         height="600px" width="800px"
+         alt="Memory 6" 
+         data-caption="Late-night Birthday Celebration ❤️"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 12.06.00_c76202e2.jpg"
+         alt="Memory 1" 
+         data-caption="puja time 📸"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 11.57.54_43a920a1.jpg" 
+         alt="Memory 2" 
+         data-caption="Random Talks"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 12.06.07_44c099f5.jpg" 
+         alt="Memory 3" 
+         data-caption="Late-night group chaos 🌙✨"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 13.32.56_7bae0cc3.jpg" 
+         alt="Memory 4" 
+         data-caption="Sexy lady on the .... ☀️"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 12.06.07_84092659.jpg" 
+         alt="Memory 5" 
+         data-caption=" Durga Puja and Remember the car story😄"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 13.32.57_57dda0d5.jpg" 
+         alt="Memory 6" 
+         data-caption="One of our best snaps! ❤️"
+         onclick="openLightbox(this)">
+    
+          <img src="WhatsApp Image 2025-08-03 at 14.13.37_ff92e80b.jpg" 
+         alt="Memory 7" 
+         data-caption="One of our best snaps! ❤️"
+         onclick="openLightbox(this)">
+
+    <img src="WhatsApp Image 2025-08-03 at 12.06.08_4ed43006.jpg" 
+         alt="Memory 7" 
+         data-caption="One of our best snaps! ❤️"
+         onclick="openLightbox(this)">
+
+    
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged Image">
+    <div id="lightbox-caption" class="caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(imgElement) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const caption = document.getElementById("lightbox-caption");
+
+      lightbox.style.display = "flex";
+      lightboxImg.src = imgElement.src;
+      caption.innerText = imgElement.getAttribute('data-caption');
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages 💌</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f2; /* Soft lavender pink */
+      overflow-x: hidden;
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('adorable-trio-hug-polar-bear-panda-and-bear-together-free-vector.jpg'); /* apni image ka path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+    nav {
+      background-color: #dda0dd;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .letter-box {
+      background-color: #fff0f5;
+      border: 2px dashed #d87093;
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+    }
+
+    .letter-box:hover {
+      transform: scale(1.01);
+    }
+
+    .secret-letter {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 1.2rem;
+      color: #5a004e;
+      white-space: pre-wrap;
+    }
+
+    .unlock-btn {
+      background-color: #d87093;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .unlock-btn:hover {
+      background-color: #c06085;
+    }
+
+    #letterContent {
+      display: none;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop>
+  <source src="WhatsApp Audio 2025-08-03 at 06.15.04_a9040686.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎉 Confetti Script -->
+<canvas class="confetti" id="confetti-canvas"></canvas>
+
+<!-- 💜 Navbar -->
+<nav style="background-color: #dda0dd; padding: 1rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+  <div style="font-size: 1.5rem; font-weight: bold; color: white;">💜 Fun And Laugh</div>
+  <div>
+    <a href="index.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Home</a>
+    <a href="memories.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Old Memories</a>
+    <a href="games.html" style="text-decoration: none; color: white; font-weight: 500;">Games</a>
+    <a href="message.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Messages</a>
+  </div>
+</nav>
+<!-- 💌 Message Section -->
+<div class="container">
+  <h2 style="color: #800080;">Secret Message for You 💌</h2>
+  <div class="letter-box">
+    <p><strong>Click below to unlock a message!</strong></p>
+    <button class="unlock-btn" onclick="unlockMessage()">💌 Click to Unlock</button>
+    <div id="letterContent" class="secret-letter">
+      <p>Hey My Dear Girlies 🌼💖,
+
+     Leave a Totally Not-Emotional Message
+     Write something super casual. Like "yo" or "cool shoes." This isn’t therapy, it’s a box for random text.
+    You both came into my life like two random characters in a boring story — and then suddenly, it turned into a comedy, thriller, and drama all in one! 🎬💥</p>
+      <p>Remember, this is all about the fun, the laughs, and the random moments that make us smile. No pressure, just good vibes! 😄</p>    
+      <p>From the late-night movie marathons to the inside jokes that only we understand, every moment with you two is a treasure. 💎</p>
+      This journey with you both is like a playlist — full of emotions, energy, weird dance moves, and the kind of lyrics only we understand. 🎧💃💫 
+      <p>So, here’s to us — the trio that turned every boring day into a hilarious adventure! 🥳💜</p>
+    </div>
+  </div>
+</div>
+
+<!-- 🎉 Confetti Script CDN -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  const confettiCanvas = document.getElementById('confetti-canvas');
+  const myConfetti = confetti.create(confettiCanvas, {
+    resize: true,
+    useWorker: true
+  });
+  setInterval(() => {
+    myConfetti({
+      particleCount: 3,
+      spread: 60,
+      origin: { y: 0 }
+    });
+  }, 500);
+</script>
+
+<!-- 🔓 Unlock Script -->
+<script>
+  function unlockMessage() {
+    document.getElementById('letterContent').style.display = 'block';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    myConfetti({ particleCount: 100, spread: 120 });
+  }
+</script>
+
+</body>
+</html>
